@@ -1,0 +1,22 @@
+type Query{
+    findAllQuery: [Course]
+}
+
+type Course{
+    courseName: String
+    registrationDate: String
+}
+
+type Mutation {
+    addCourse(course: CourseParam): CourseResponse
+}
+type CourseResponse {
+    courseId: String
+    courseName: String
+}
+input CourseParam {
+    courseName: String!
+    registrationDate: String
+    duration: String
+    desc: String
+}
